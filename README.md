@@ -34,7 +34,8 @@ An advanced project utilizing Agentic AI for comprehensive stock market analysis
 1. **Run the Application**:
    Start the analysis process using:
    ```bash
-   python main.py
+   cd multi_agent_financial_analyst
+   streamlit run financial_analyst
    ```
 
 2. **Input Stock Information**:
