@@ -21,7 +21,7 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Stock-Analysis-Using-Agentic-AI.git
+   git clone https://github.com/Pratham-gupta-235/Stock-Analysis-Using-Agentic-AI.git
    cd Stock-Analysis-Using-Agentic-AI
    ```
 2. Install dependencies:
