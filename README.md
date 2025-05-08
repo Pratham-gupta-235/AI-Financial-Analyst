@@ -13,14 +13,7 @@ The application leverages SambaNova's Llama-4-Maverick model to provide institut
 
 ## 🎥 Demo Video
 
-Watch the application in action below:
-
-<video width="800" controls>
-  <source src="path_to_your_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-Alternatively, [click here to download the video](Demo.mp4).
+[click here to download the video](Demo.mp4).
 
 ## 🚀 Features
 
