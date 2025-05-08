@@ -30,7 +30,7 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
    ```
 3. Create a .env file in the root directory with your SambaNova API key:
    ```env
-      SAMBANOVA_API_KEY=your_api_key_here
+   SAMBANOVA_API_KEY=your_api_key_here
    ```
 
 ## ▶️ Usage
