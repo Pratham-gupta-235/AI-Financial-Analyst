@@ -2,8 +2,7 @@
 
 A multi-agent AI system that performs in-depth stock analysis using real-time market data.
 
-### Demo:
-<video controls autoplay muted playsinline src="media/demo.mp4" width="100%"></video>
+<video controls autoplay muted src="Demo.mp4" width="100%" height="100%"></video>
 
 ## 🧠 Overview
 
