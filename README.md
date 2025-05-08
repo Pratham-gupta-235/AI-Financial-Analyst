@@ -1,4 +1,4 @@
-# 📊 Stock Analysis Using Agentic AI
+# 📊 AI Financial Analyst
 
 A multi-agent AI system that performs in-depth stock analysis using real-time market data.
 
@@ -21,8 +21,8 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Pratham-gupta-235/Stock-Analysis-Using-Agentic-AI.git
-   cd Stock-Analysis-Using-Agentic-AI
+   git clone https://github.com/Pratham-gupta-235/AI-Financial-Analyst.git
+   cd AI-Financial-Analyst
    ```
 2. Install dependencies:
    ```bash
