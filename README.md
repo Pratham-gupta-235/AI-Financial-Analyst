@@ -1,67 +1,70 @@
 # 📊 Stock Analysis Using Agentic AI
 
-An advanced project utilizing Agentic AI for comprehensive stock market analysis. This project integrates intelligent agents to analyze stock trends and provide actionable insights.
+A multi-agent AI system that performs in-depth stock analysis using real-time market data.
 
-## Features
+## 🧠 Overview
 
-- **Agentic AI Integration**: Employs AI agents for advanced stock market data analysis.
-- **Data Processing**: Handles historical stock data for detailed analysis.
-- **Insight Generation**: Delivers predictions and actionable insights from the analysis.
-- **Interactive Interface**: User-friendly interface for seamless interaction.
+This application uses **CrewAI's** multi-agent architecture to analyze stocks with specialized AI agents:
+- 🧮 **Financial Analyst Agent**: Fetches and analyzes real-time stock data  
+- 📝 **Report Writer Agent**: Transforms technical analysis into professional investment reports
 
-## Installation
+The application leverages **SambaNova's Llama-4-Maverick model** to provide institutional-grade stock analysis with a user-friendly **Streamlit** interface.
 
-1. **Clone This Repository**:
+## 🚀 Features
+
+- 📈 Real-time stock data analysis using YFinance  
+- 📊 Comprehensive analysis of price movements, financial metrics, and market trends  
+- 🧾 Professional investment reports with clear sections and visual indicators  
+- 🖥️ Interactive Streamlit interface for easy stock analysis  
+
+## ⚙️ Installation
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/Pratham-gupta-235/Stock-Analysis-Using-Agentic-AI.git
+   git clone https://github.com/yourusername/Stock-Analysis-Using-Agentic-AI.git
    cd Stock-Analysis-Using-Agentic-AI
    ```
-
-2. **Install Dependencies**:
-   Make sure Python is installed, then use the following command to install necessary packages:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   Create a .env file in the root directory with your SambaNova API key:
    ```
-
-3. **Set Up Environment Variables**:
-   Create a `.env` file in the root directory and include the required API keys:
+Create a .env file in the root directory with your SambaNova API key:
    ```env
-   API_KEY=your_api_key_here
+      SAMBANOVA_API_KEY=your_api_key_here
    ```
 
-## Usage
-
-1. **Run the Application**:
-   Start the analysis process using:
+## ▶️ Usage
+1. Run the Streamlit application:
+   
    ```bash
-   cd multi_agent_financial_analyst
    streamlit run financial_analyst.py
    ```
+2. In the sidebar:
 
-2. **Input Stock Information**:
-   - Provide the stock symbol (e.g., AAPL, TSLA).
-   - Select the desired options for the analysis.
+🔑 Enter your SambaNova API key 
 
-3. **View Results**:
-   - Check the terminal for detailed insights.
+💼 Enter a stock symbol (e.g., AAPL, GOOGL)
 
-## How It Works
+📥 Click "Analyze Stock"
 
-This project employs a multi-agent AI system for stock analysis:
+📤 View and download the generated analysis report
 
-1. **Data Collection Agent**:
-   - Gathers historical and real-time stock data from various sources.
+🗂️ Project Structure
+financial_analyst.py: Main Streamlit application
 
-2. **Analysis Agent**:
-   - Processes and examines data to uncover trends and patterns.
+tools/financial_tools.py: Custom tools for stock data retrieval
 
-3. **Prediction Agent**:
-   - Utilizes machine learning models to forecast stock prices.
+.env: Environment variables (API keys)
 
-## License
+requirements.txt: Project dependencies
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+📌 Requirements
+🐍 Python 3.11+
 
-## Acknowledgments
+🔐 SambaNova API key
 
-Special thanks to the open-source community for their valuable contributions to the field.
+🌐 Internet connection for real-time stock data retrieval
+
+📝 License
+This project is licensed under the MIT License.
