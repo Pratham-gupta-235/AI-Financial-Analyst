@@ -42,29 +42,29 @@ Create a .env file in the root directory with your SambaNova API key:
    ```
 2. In the sidebar:
 
-🔑 Enter your SambaNova API key 
+   🔑 Enter your SambaNova API key 
+   
+   💼 Enter a stock symbol (e.g., AAPL, GOOGL)
+   
+   📥 Click "Analyze Stock"
+   
+   📤 View and download the generated analysis report
 
-💼 Enter a stock symbol (e.g., AAPL, GOOGL)
+## 🗂️ Project Structure
+   ``financial_analyst.py``: Main Streamlit application
+   
+   ```tools/financial_tools.py```: Custom tools for stock data retrieval
+   
+   ```.env```: Environment variables (API keys)
+   
+   ```requirements.txt```: Project dependencies
 
-📥 Click "Analyze Stock"
-
-📤 View and download the generated analysis report
-
-🗂️ Project Structure
-financial_analyst.py: Main Streamlit application
-
-tools/financial_tools.py: Custom tools for stock data retrieval
-
-.env: Environment variables (API keys)
-
-requirements.txt: Project dependencies
-
-📌 Requirements
-🐍 Python 3.11+
-
-🔐 SambaNova API key
-
-🌐 Internet connection for real-time stock data retrieval
-
-📝 License
-This project is licensed under the MIT License.
+## 📌 Requirements
+   🐍 Python 3.11+
+   
+   🔐 SambaNova API key
+   
+   🌐 Internet connection for real-time stock data retrieval
+   
+   📝 License
+   This project is licensed under the MIT License.
