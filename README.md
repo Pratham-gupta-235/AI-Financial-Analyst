@@ -20,7 +20,7 @@ Watch the application in action below:
   Your browser does not support the video tag.
 </video>
 
-Alternatively, [click here to download the video](path_to_your_video.mp4).
+Alternatively, [click here to download the video](Demo.mp4).
 
 ## 🚀 Features
 
