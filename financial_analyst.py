@@ -31,7 +31,7 @@ class StockAnalysis(BaseModel):
 @st.cache_resource
 def load_llm():
     return LLM(
-        model="sambanova/Llama-4-Maverick-17B-128E-Instruct",
+        model="NVIDIABuild-Autogen-65",
         api_key=os.getenv("SAMBANOVA_API_KEY"),
         temperature=0.3
     )

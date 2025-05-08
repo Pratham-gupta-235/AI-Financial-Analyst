@@ -1,6 +1,6 @@
 # 📊 AI Financial Analyst
 
-A multi-agent AI system that performs in-depth stock analysis using real-time market data.
+A multi-agent AI system that performs in-depth stock analysis using real-time market data with interactive visualizations.
 
 <video controls autoplay muted src="Demo.mp4" width="100%" height="100%"></video>
 
@@ -15,7 +15,8 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
 ## 🚀 Features
 
 - 📈 Real-time stock data analysis using YFinance  
-- 📊 Comprehensive analysis of price movements, financial metrics, and market trends  
+- 📊 Comprehensive analysis of price movements, financial metrics, and market trends
+- 📉 Interactive data visualizations including candlestick charts, technical indicators, and performance metrics
 - 🧾 Professional investment reports with clear sections and visual indicators  
 - 🖥️ Interactive Streamlit interface for easy stock analysis  
 
@@ -51,6 +52,17 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
    
    📤 View and download the generated analysis report
 
+## 📊 Visualizations
+
+The application provides powerful interactive visualizations to enhance your stock analysis:
+
+- **Candlestick Chart**: View price action with 20-day and 50-day moving averages
+- **Volume Analysis**: Color-coded volume bars showing trading activity
+- **Technical Indicators**: RSI (Relative Strength Index) with overbought/oversold levels
+- **Performance Gauge**: Visual representation of current price position in 52-week range
+
+All charts are interactive, allowing you to zoom, pan, and hover for detailed information.
+
 ## 🗂️ Project Structure
    ``financial_analyst.py``: Main Streamlit application
    
@@ -61,7 +73,7 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
    ```requirements.txt```: Project dependencies
 
 ## 📌 Requirements
-   🐍 Python 3.11+
+   🐍 Python 3.11+ 
    
    🔐 SambaNova API key
    
