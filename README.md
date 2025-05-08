@@ -2,6 +2,9 @@
 
 A multi-agent AI system that performs in-depth stock analysis using real-time market data.
 
+### Demo:
+<video controls autoplay muted playsinline src="media/demo.mp4" width="100%"></video>
+
 ## 🧠 Overview
 
 This application uses **CrewAI's** multi-agent architecture to analyze stocks with specialized AI agents:
