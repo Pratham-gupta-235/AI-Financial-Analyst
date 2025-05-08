@@ -3,10 +3,17 @@ from datetime import datetime
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 import json
+import pandas as pd
 
 class StockInput(BaseModel):
     """Input schema for YFinanceStockTool."""
     symbol: str = Field(..., description="The stock symbol to analyze (e.g., 'AAPL', 'GOOGL')")
+
+class HistoricalDataInput(BaseModel):
+    """Input schema for Historical Stock Data Tool."""
+    symbol: str = Field(..., description="The stock symbol to analyze (e.g., 'AAPL', 'GOOGL')")
+    period: str = Field("1y", description="Period to fetch data for: 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max")
+    interval: str = Field("1d", description="Data interval: 1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo")
 
 class YFinanceStockTool(BaseTool):
     name: str = "stock_data_tool"
@@ -71,4 +78,59 @@ class YFinanceStockTool(BaseTool):
 
     def _arun(self, symbol: str) -> str:
         # Async implementation if needed
-        raise NotImplementedError("Async version not implemented") 
+        raise NotImplementedError("Async version not implemented")
+
+class HistoricalStockDataTool(BaseTool):
+    name: str = "historical_stock_data_tool"
+    description: str = """
+    A tool for getting historical stock market data in a format suitable for visualizations.
+    Use this tool when you need to generate charts and analyze trends over time.
+    The data returned is ideal for creating price charts, volume analysis, and technical indicators.
+    """
+    args_schema: type[BaseModel] = HistoricalDataInput
+
+    def _run(self, symbol: str, period: str = "1y", interval: str = "1d") -> str:
+        try:
+            stock = yf.Ticker(symbol)
+            
+            # Get historical data
+            hist = stock.history(period=period, interval=interval)
+            
+            # Reset index to make Date a column
+            hist = hist.reset_index()
+            
+            # Convert Date to string format
+            hist['Date'] = hist['Date'].dt.strftime('%Y-%m-%d')
+            
+            # Calculate some basic technical indicators
+            if len(hist) > 20:
+                # 20-day moving average
+                hist['MA20'] = hist['Close'].rolling(window=20).mean()
+                
+                # 50-day moving average
+                if len(hist) > 50:
+                    hist['MA50'] = hist['Close'].rolling(window=50).mean()
+                
+                # Relative Strength Index (RSI)
+                delta = hist['Close'].diff()
+                gain = delta.where(delta > 0, 0).rolling(window=14).mean()
+                loss = -delta.where(delta < 0, 0).rolling(window=14).mean()
+                rs = gain / loss
+                hist['RSI'] = 100 - (100 / (1 + rs))
+            
+            # Convert to JSON
+            result = {
+                "symbol": symbol,
+                "period": period,
+                "interval": interval,
+                "data": hist.to_dict(orient='records')
+            }
+            
+            return json.dumps(result)
+            
+        except Exception as e:
+            return f"Error fetching historical data for {symbol}: {str(e)}"
+
+    def _arun(self, symbol: str, period: str = "1y", interval: str = "1d") -> str:
+        # Async implementation if needed
+        raise NotImplementedError("Async version not implemented")
