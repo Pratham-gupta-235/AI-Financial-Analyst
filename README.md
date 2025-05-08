@@ -27,9 +27,8 @@ The application leverages **SambaNova's Llama-4-Maverick model** to provide inst
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-   Create a .env file in the root directory with your SambaNova API key:
    ```
-Create a .env file in the root directory with your SambaNova API key:
+3. Create a .env file in the root directory with your SambaNova API key:
    ```env
       SAMBANOVA_API_KEY=your_api_key_here
    ```
