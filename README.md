@@ -13,7 +13,7 @@ The application leverages SambaNova's Llama-4-Maverick model to provide institut
 
 ## 🎥 Demo Video
 
-[click here to download the video](Demo.mp4).
+https://github.com/user-attachments/assets/0ceca7c7-419f-4857-a0db-848d23c4b4a8
 
 ## 🚀 Features
 
